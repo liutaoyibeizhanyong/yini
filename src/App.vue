@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <keep-alive exclude="Detail,Open">
+    <keep-alive exclude="Detail,Open,Login">
       <!-- <keep-alive>不让路由销毁  exclude 把路由排除在外-->
     <router-view/>
     </keep-alive>

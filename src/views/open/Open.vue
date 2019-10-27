@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     tiao(){
-      this.$router.push('./home')
+      this.$router.push('./Login')
     }
   },
   mounted() {
