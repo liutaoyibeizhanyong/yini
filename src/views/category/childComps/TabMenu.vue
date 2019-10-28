@@ -39,10 +39,10 @@
 
 <style scoped>
   #tab-menu {
-    height: 100%;
+    height: 125%;
     width: 100px;
     box-sizing: border-box;
-    background:peachpuff
+    background:lavenderblush
   }
 
   .menu-list-item {

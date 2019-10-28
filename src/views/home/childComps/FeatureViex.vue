@@ -7,7 +7,7 @@
 </template>
 <script>
 export default {
-  name:"FeatureViex"
+  name:"FeatureViex",
 }
 </script>
 <style scoped>

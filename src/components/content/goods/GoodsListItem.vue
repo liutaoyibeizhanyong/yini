@@ -1,6 +1,6 @@
 <template>
   <div class="goods_item" @click='godetail'>
-  <img :src="show" alt="图片" @load="imageLoad">
+  <img :src="goodsitem.show.img" alt="" @load="imageLoad">
   <div class="goods_info">
       <p>{{goodsitem.title}}</p>
       <span class="price">{{goodsitem.price}}</span>
@@ -20,11 +20,6 @@ export default {
       }
     }
   },
-  computed:{
-    show(){
-      return this.goodsitem.image||this.goodsitem.show.img
-    }
-  },
   methods: {
     imageLoad(){
       // if(this.$route.path.indexOf('/home')){
@@ -42,7 +37,7 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style scoped> 
   .goods_item{
     padding-bottom: 40px;
     position: relative;

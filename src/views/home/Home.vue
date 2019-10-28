@@ -129,17 +129,18 @@ export default {
 .home{
   height: 100vh;
   position: relative;
+
 }
 .home_nav{
-  color:red;
-  background:peachpuff;
+  color:#fff;
   font-size: 18px;
+  background: salmon
 }
 .van-swipe-item{
   height:390px ;
 }
 /*.tabcontrol{
-   position: sticky;
+position: sticky;
   吸顶效果 但是游览器兼容不好 
   top:44px;
   z-index: 9;
@@ -157,5 +158,6 @@ export default {
   position: relative;
   z-index: 9;
   background:#fff;
+  top:-3px
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="param-info" v-if="Object.keys(paraminfo).length !== 0">
     <table v-for="(table, index) in paraminfo.sizes"
-           class="info-size" :key="index">
+    class="info-size" :key="index">
       <tr v-for="(tr, indey) in table" :key="indey">
         <td v-for="(td, indez) in tr" :key="indez">{{td}}</td>
       </tr>
@@ -13,7 +13,7 @@
       </tr>
     </table>
     <div class="info-img" v-if="paraminfo.image.length !== 0">
-      <img :src="paraminfo.image" alt="">
+      <img :src="paraminfo.image | dalImg" alt="">
     </div>
   </div>
 </template>
@@ -22,14 +22,22 @@
 	export default {
 		name: "DetailParamInfo",
     props: {
-		  paraminfo: {
+		paraminfo: {
         type: Object,
         default(){
           return{}
         }
       }
+    },
+    filters: {
+    dalImg(val) {
+      if(val.startsWith("//")) {
+        return 'http:'+val
+      }
+      return val
     }
-	}
+  }
+}
 </script>
 
 <style scoped>

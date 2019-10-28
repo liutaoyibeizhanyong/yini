@@ -1,9 +1,9 @@
 <template>
   <div class="recommend">
-      <div class="recommend_item" v-for="(item,index) in recommends" :key="index"><a href="#">
+      <div class="recommend_item" @click="tiao" v-for="(item,index) in recommends" :key="index">
         <img :src="item.image" alt="推荐">
         <div>{{item.title}}</div>
-        </a></div>
+      </div>
   </div>
 </template>
 <script>
@@ -16,7 +16,14 @@ export default {
         return []
       }
     }
-  }
+  },
+  methods: {
+    tiao(){
+      this.$router.push({
+        name:'Category'
+      })
+    }
+  },
 }
 </script>
 <style  scoped>
@@ -27,7 +34,7 @@ export default {
   padding: 12px 0 22px;
   border-bottom: 10px solid #eee;
 }
-a{
+.recommend_item{
    display:flex;
   flex-direction: column;
   justify-content: space-around;

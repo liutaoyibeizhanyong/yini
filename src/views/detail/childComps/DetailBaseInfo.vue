@@ -13,7 +13,7 @@
     </div>
     <div class="info-service">
       <span class="info-service-item" v-for="index in goods.services.length-1" :key="index">
-        <img :src="goods.services[index-1].icon">
+        <img :src="goods.services[index-1]">
         <span>{{goods.services[index-1].name}}</span>
       </span>
     </div>
@@ -27,8 +27,9 @@
 		goods: {
 		type: Object
       }
-    }
-	}
+    },
+  
+}
 </script>
 
 <style scoped>

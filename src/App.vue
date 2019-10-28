@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <keep-alive exclude="Detail,Open,Login">
-      <!-- <keep-alive>不让路由销毁  exclude 把路由排除在外-->
-    <router-view/>
+<transition mode="out-in">
+  <keep-alive exclude="Detail,Open,Login">
+      <router-view class="container"></router-view>
     </keep-alive>
+    </transition>
     <maintabar/>
   </div>
 </template>

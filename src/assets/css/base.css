@@ -14,3 +14,21 @@ legend { color:#000; }
 fieldset, img { border:0; }
 button, input, select, textarea { font-size:100%; }
 table { border-collapse:collapse; border-spacing:0; }
+html,
+body,
+#app{ height: 100%;
+}
+#app {
+display: flex;
+flex-direction: column;
+
+}
+.container {
+flex: 1;
+overflow: auto;
+}
+.v-enter { opacity: 0.5; transform: translateX(100%); -webkit-transform: translateX(100%); -moz-transform: translateX(100%); -ms-transform: translateX(100%); -o-transform: translateX(100%);
+}
+.v-enter-active,
+.v-leave-active { transition: all 0.2s ease; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -ms-transition: all 0.2s ease; -o-transition: all 0.2s ease;
+}

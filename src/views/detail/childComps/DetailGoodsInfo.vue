@@ -8,8 +8,8 @@
     </div>
     <div class="info-key">{{datainfo.detailImage[0].key}}</div>
     <div class="info-list">
-      <img v-for="(item, index) in datainfo.detailImage[0].list" :key="index" :src="item" alt="" @load="imgload">
-    </div>
+      <img v-for="(item, index) in datainfo.detailImage[0].list" :key="index" :src="item | dalImg" alt="" @load="imgload">
+    </div> 
   </div>
 </template>
 
@@ -26,6 +26,14 @@
       count: 0,
       }
     },
+    filters: {
+    dalImg(val) {
+      if(val.startsWith("//")) {
+        return 'http:'+val
+      }
+      return val
+    }
+  },
     methods: {
       imgload(){
       this.count++
@@ -33,7 +41,7 @@
       this.$emit('imageLoad')
     }
     },
-  }
+  },
   }
 </script>
 

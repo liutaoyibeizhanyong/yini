@@ -31,15 +31,16 @@ import {getShow} from '../../../network/profile'
 
 <style scoped>
 .geren{
-  margin: 20px 0 0 20px;
+  margin: 10px 0 0 20px;
 }
 .geren img {
   height: 80px;
   width: 80px;
-  border-radius:50% 
+  border-radius:50%;
+  margin-bottom: 10px;
 }
 .span1{
-  margin-left: 10px;
+  margin:-10px 0 0 20px;
   opacity: .6;
   color:rosybrown
 }

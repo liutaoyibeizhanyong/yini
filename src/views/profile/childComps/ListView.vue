@@ -41,11 +41,11 @@
   flex-direction: column;
 }
 .fiast{
-   display: flex;
+  display: flex;
   height: 50px;
   align-items: center;
   border-bottom: 10px solid rgba(200, 200, 200, 0.2);
-   border-top: 10px solid rgba(200, 200, 200, 0.2);
+  border-top: 10px solid rgba(200, 200, 200, 0.2);
 }
 .wo{
   display: flex;

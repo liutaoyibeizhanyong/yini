@@ -8,7 +8,7 @@
   <goodinfo :datainfo="datainfo" @imageLoad="imageLoad"/>
   <paramsinfo ref="params" :paraminfo="paraminfo"/>
   <commentinfo ref="comment" :pinglun="pinglun" />
-  <goodslist ref="recommend" :goods="recommends"/>
+  <goodslist ref="recommend" :goods="recommends"/> 
   </scroll>
   <booktop class="bytop" @click.native="goTop" v-show="isShow"/>
   <detail-bottom-bar @addcart="addCart"/>
@@ -23,9 +23,9 @@ import detailBottomBar from './childComps/DetailBottomBar'
 import commentinfo from './childComps/DetailCommentInfo'
 import xiangqing from './childComps/DetailBaseInfo'
 import shangjia from './childComps/DetailShopInfo'
+import goodslist from './childComps/DetailList'
 import {getDetail,Goods,Shop,GoodsParam,getReommend} from '../../network/detail'
 import scroll from '../../components/common/scroll/Scroll'
-import goodslist from '../../components/content/goods/GoodsList'
 import booktop from '../../components/content/bookTop/BookTop'
 export default {
   name:'Detail',
@@ -141,7 +141,6 @@ export default {
 .nav_top{
   color: yellow;
   position: fixed;
-  background:#f8f8ee ;
   z-index: 1;
   top:0;
   left: 0;

@@ -1,7 +1,7 @@
 <template>
   <div class="banners">
     <van-swipe class="swiper" :autoplay="3000" indicator-color="red">
-  <van-swipe-item  v-for="(item,index) in lunbanner " :key="index"><img  :src="item" alt=""></van-swipe-item>
+  <van-swipe-item  v-for="(item,index) in lunbanner " :key="index"><img :src="item | dalImg " alt=""></van-swipe-item>
 </van-swipe>
   </div>
 </template>
@@ -14,6 +14,14 @@ export default {
       default(){
         return[]
       }
+    }
+  },
+  filters: {
+    dalImg(val) {
+      if(val.startsWith("//")) {
+        return 'http:'+val
+      }
+      return val
     }
   }
 }

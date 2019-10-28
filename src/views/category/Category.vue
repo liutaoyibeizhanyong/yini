@@ -110,8 +110,8 @@
     height: 100vh;
   }
   .nav-bar {
-    background:peachpuff;
-    color: red;
+    background: salmon;
+    color: #fff;
   position: relative;
     left: 0;
     top: 0;

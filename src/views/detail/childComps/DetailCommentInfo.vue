@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="info-user">
-        <img :src="pinglun.user.avatar" alt="">
+        <img :src="pinglun.user.avatar | dalImg " alt="">
         <span>{{pinglun.user.uname}}</span>
       </div>
       <div class="info-detail">
@@ -19,7 +19,7 @@
           <span>{{pinglun.style}}</span>
         </div>
         <div class="info-imgs">
-          <img :src="item" v-for="(item, index) in pinglun.images" :key="index">
+          <img :src="item | dalImg" v-for="(item, index) in pinglun.images" :key="index">
         </div>
       </div>
     </div>
@@ -38,6 +38,13 @@ import {formatDate} from  '../../../common/utils'
       }
     },
     filters:{
+      dalImg(val) {
+      if(val.startsWith("//")) {
+        return 'http:'+val
+      }
+      return val
+    }
+      ,
       showDate(value){
         //时间戳转换为Date对象
         const data = new Date(value*1000)

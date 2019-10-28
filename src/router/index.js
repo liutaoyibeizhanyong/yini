@@ -1,12 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-const Open = () => import('../views/open/Open')
-const Home = () => import('../views/home/Home')
-const Cart = () => import('../views/cart/Cart')
-const Category = () => import('../views/category/Category')
-const Profile = () => import('../views/profile/Profile')
-const Detail = () => import('../views/detail/Detail')
-const Login = () => import('../views/login/Login')
 Vue.use(VueRouter)
 
 const routes = [
@@ -17,37 +10,37 @@ const routes = [
   {
     path: '/open',
     name: 'Open',
-    component: Open
+    component: () => import('../views/open/Open')
   },
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: () => import('../views/login/Login')
   },
   {
     path: '/home',
     name: 'Home',
-    component: Home
+    component: () => import('../views/home/Home')
   },
   {
     path: '/category',
     name: 'Category',
-    component: Category
+    component: () => import('../views/category/Category')
   },
   {
     path: '/cart',
     name: 'Cart',
-    component: Cart
+    component: () => import('../views/cart/Cart')
   },
   {
     path: '/profile',
     name: 'Profile',
-    component: Profile
+    component: () => import('../views/profile/Profile')
   },
   {
     path: '/detail',
     name: 'Detail',
-    component: Detail
+    component: () => import('../views/detail/Detail')
   }
 ]
 

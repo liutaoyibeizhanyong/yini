@@ -38,10 +38,12 @@ export default {
 .dateilnav{
   border-bottom: 1px solid #ccc;
 }
+navbar{
+  background: white
+}
 .title{
   display: flex;
   font-size: 13px;
-  
 }
 .title_item{
   flex: 1;

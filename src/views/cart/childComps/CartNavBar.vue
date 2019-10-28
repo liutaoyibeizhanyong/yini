@@ -18,10 +18,10 @@ export default {
 </script>
 <style scoped>
 .cart_nav{
-  background: peachpuff
+background: salmon
 }
 .title{
-  color: red;
+  color: aliceblue;
   font-size: 18px;
 }
 </style>

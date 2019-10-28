@@ -44,13 +44,13 @@
 
 <style scoped>
 #profile{
-  background: wheat
+  background: #fcfcfc
 }
   .nav-bar {
   font-size: 18px;
-  color: red;
+  color: #fff;
   font-size: 18px;
-  background: peachpuff
+  background: salmon;
   }
 
   .account {
@@ -61,7 +61,7 @@
     width: 100%;
     margin-right: 1px;
     text-align: center;
-    background: wheat
+    background:lavenderblush
   }
 
   .account-item:last-of-type {

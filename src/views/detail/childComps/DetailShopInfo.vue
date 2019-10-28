@@ -1,7 +1,7 @@
 <template>
   <div class="shop-info">
     <div class="shop-top">
-      <img :src="shop.logo">
+      <img :src="shop.logo | dalImg">
       <span class="title">{{shop.name}}</span>
     </div>
     <div class="shop-middle">
@@ -47,10 +47,16 @@
       }
     },
     filters: {
-      sellCountFilter: function (value) {
+      dalImg(val) {
+      if(val.startsWith("//")) {
+        return 'http:'+val
+      }
+      return val
+    },
+    sellCountFilter(value) {
         if (value < 10000) return value;
         return (value/10000).toFixed(1) + '万'
-      }
+      },
     }
 	}
 </script>
