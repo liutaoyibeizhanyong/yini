@@ -39,7 +39,7 @@ export default {
   border-bottom: 1px solid #ccc;
 }
 navbar{
-  background: white
+  background: white                                                               
 }
 .title{
   display: flex;
