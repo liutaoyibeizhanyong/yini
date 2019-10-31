@@ -2,6 +2,9 @@ const mutations = {
   isShow(state, flag) {
     state.isShow = flag
   },
+  getObj(state,obj){
+    state.userObj = obj
+  },
   addCart(state, product) {
     // 1.查看是否添加过
     let oldProduct = state.cartList.find(item => item.id === product.id)

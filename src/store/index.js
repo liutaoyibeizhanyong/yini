@@ -8,7 +8,8 @@ Vue.use(Vuex)
 
 const state = {
   isShow:true,
-  cartList: []
+  cartList: [],
+  userObj:{}
 }
 
 const store = new Vuex.Store({

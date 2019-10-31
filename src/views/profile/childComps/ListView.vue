@@ -20,16 +20,30 @@
           <van-icon name="setting-o" />
           <span>设置</span>
         </div>
-    </div>
+        <div class="wo">
+          <van-icon name="exchange" />
+          <span @click="isQie">切换登录</span>
+        </div>
+        <!-- 图标位置 -->
+        </div>
 </template>
 
 <script>
+import {setToken} from '../../../utils/anth'
 	export default {
     name: "ListView",
+    data() {
+        return {
+        }
+      },
     methods: {
+      isQie(){
+        setToken('')
+        this.$router.push({name:"Login"})
+      },
       goCart(){
         this.$router.push('./cart')
-      }
+      },
     },
 	}
 </script>
@@ -78,5 +92,16 @@ color: salmon
 .van-icon-setting-o:before{
   font-size: 26px;
   color:teal
+}
+.van-icon-exchange:before{
+  font-size: 26px;
+  color:red
+}
+.ding{
+  height: 40%;
+  background: #000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 </style>

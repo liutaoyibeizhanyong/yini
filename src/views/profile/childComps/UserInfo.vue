@@ -18,13 +18,11 @@ import {getShow} from '../../../network/profile'
     },
     methods: {
       show(){
-        getShow(18339464616,520520520).then(res=>{
-          this.obj=res.data.profile
-        })
+        this.obj=this.$store.state.userObj
       }
     },
-    mounted() {
-      this.show()
+    created() {
+          this.show()
     },
 	}
 </script>
